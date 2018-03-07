@@ -159,7 +159,7 @@ $(window).bind("load", function() {
 		output.getSession().setValue("");
 		scrollDown();
 
-		socket.emit("input", editor.getSession().getValue() + "\r");
+		socket.emit("input", editor.getSession().getValue().encode("utf8") + "\r");
 	});
 
 	$("#layout").ax5layout({
