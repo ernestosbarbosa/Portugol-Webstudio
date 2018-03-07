@@ -38,7 +38,7 @@ router.group("/ide", function(router) {
             var baseURL = "/";
             var data = origin;
             if(extName == ".htm" || extName == ".html"){
-                data = data.toString('utf8');
+                // data = data.toString('utf8');
                 var style = ".dp-highlighter{pointer-events:initial !important}html,body{margin:0;padding:0;font-family:'PT Sans',sans-serif;font-size:15px}body{padding-bottom:25px}p{line-height:18pt}h1,h2{padding-left:15px;font-family:'PT Sans',sans-serif}h1{font-size:18pt}ul>li{margin-top:10px}ul>li:first-child{margin-top:0}";
               	data = data.replace("<head>", "<head><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><script type=\"text/javascript\">var d={baseURL:\""+ baseRoute +"\"};</script>");
               	data = data.replace("</head>", "<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\"><style type=\"text/css\">" + style + "</style></head>");
